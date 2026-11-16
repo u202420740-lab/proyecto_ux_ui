@@ -1,0 +1,534 @@
+/* PASO 1. El ancho incluye padding y borde: facilita calcular tamaños. */
+* {
+  box-sizing: border-box;
+}
+
+/* PASO 2. Estilos generales que heredan los textos. */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #26352d;
+  background: #f7fbf6;
+  line-height: 1.65;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 2.7rem;
+  margin: 0 0 1rem;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-top: 0;
+}
+
+h3 {
+  font-size: 1.2rem;
+}
+
+a {
+  color: #174d32;
+  text-underline-offset: 4px;
+}
+
+/* El foco visible permite recorrer la web con el teclado. */
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible,
+input:focus-visible,
+select:focus-visible {
+  outline: 3px solid #e4a83a;
+  outline-offset: 4px;
+}
+
+/* PASO 3. Nunca estirar una imagen más allá de su contenedor. */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.contenedor {
+  width: 92%;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.seccion {
+  padding: 3.5rem 0;
+}
+
+.fondo {
+  background: #dae5bc;
+}
+
+.etiqueta {
+  font-weight: bold;
+  color: #479363;
+  font-size: .9rem;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+}
+
+.nota {
+  font-size: .9rem;
+}
+
+/* PASO 4. Flexbox alinea logo y navegación. wrap evita desbordamientos. */
+.cabecera {
+  background: white;
+  border-bottom: 1px solid #dfdbb7;
+}
+
+.barra {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding: 1rem 0;
+}
+
+.marca {
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+  text-decoration: none;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .3rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu a,
+summary {
+  display: block;
+  padding: .65rem .8rem;
+  color: #333d2b;
+  cursor: pointer;
+}
+
+.menu a {
+  text-decoration: none;
+}
+
+.menu a:hover,
+summary:hover {
+  background: #c1df7c;
+  border-radius: .4rem;
+}
+
+/* El menú acompaña al usuario al bajar por la página.
+   sticky conserva su espacio: no hace falta compensar con padding en body.
+   top: 0 lo mantiene pegado arriba; z-index evita que las fotos lo tapen. */
+.cabecera {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 4px 18px #7e9739da;
+}
+
+/* Dejar espacio al navegar con #id para que el header no tape el título. */
+section[id],
+main[id] {
+  scroll-margin-top: 130px;
+}
+
+/* PASO 5. La lista interior es vertical. Solo details controla su apertura. */
+.desplegable {
+  position: relative;
+}
+
+summary {
+  list-style: revert;
+}
+
+.submenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 230px;
+  padding: .5rem;
+  margin: .3rem 0 0;
+  list-style: none;
+  background: white;
+  border: 1px solid #d0d9a6;
+  border-radius: .5rem;
+  box-shadow: 0 8px 20px #5fa11385;
+  z-index: 10;
+}
+
+/* PASO 6. Dos columnas iguales: imagen y texto. minmax evita desborde. */
+.dos-columnas {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.dos-columnas>* {
+  min-width: 0;
+}
+
+.hero {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.foto {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 2rem .8rem 2.5rem 1rem;
+}
+
+/* PASO 7. Enlaces y botones con apariencia consistente. */
+.boton {
+  display: inline-block;
+  padding: .8rem 1.1rem;
+  background: #93c02b;
+  color: white;
+  border: 0;
+  border-radius: .45rem;
+  font: inherit;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.boton:hover {
+  background: #318111;
+}
+
+.enlace {
+  display: inline-block;
+  margin: .8rem;
+}
+
+/* PASO 8. Tres tarjetas en escritorio. */
+.tarjetas {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.tarjeta {
+  padding: 1.5rem;
+  border: 1px solid #cadfb7;
+  border-radius: .7rem;
+  background: white;
+}
+
+.numero {
+  color: #2d770b;
+  font-weight: bold;
+}
+
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+figure {
+  margin: 0;
+}
+
+.galeria img {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  border-radius: .6rem;
+}
+
+figcaption {
+  padding-top: .5rem;
+}
+
+blockquote {
+  margin-left: 0;
+  font-size: 1.35rem;
+}
+
+/* PASO 9. El orientador responde a los radios sin JavaScript. */
+.orientador {
+  border: 1px solid #97c88d;
+  border-radius: .6rem;
+  padding: 1.5rem;
+  min-width: 0;
+}
+
+legend {
+  font-weight: bold;
+  padding: 0 .5rem;
+}
+
+.orientador>label {
+  display: inline-block;
+  margin: .4rem 1rem .4rem 0;
+  padding: .4rem;
+  cursor: pointer;
+}
+
+.orientador>input:checked+label {
+  background: #54942f;
+  color: white;
+  border-radius: .3rem;
+}
+
+.resultados {
+  background: white;
+  padding: 1.5rem;
+  border-radius: .5rem;
+  margin-top: 1rem;
+}
+
+/* Primero ocultamos los tres paneles. */
+.respuesta {
+  display: none;
+}
+
+/* ~ busca un hermano posterior. :checked identifica la opción marcada. */
+#mochila:checked~.resultados .mochila,
+#libreta:checked~.resultados .libreta,
+#abrigo:checked~.resultados .abrigo {
+  display: block;
+}
+
+/* PASO 10. Cada campo ocupa una fila del formulario. */
+.formulario {
+  display: grid;
+  gap: .6rem;
+  background: white;
+  border: 1px solid #d3dfb7;
+  padding: 1.5rem;
+  border-radius: .7rem;
+}
+
+.formulario>label {
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+  width: 100%;
+  min-width: 0;
+  font: inherit;
+  padding: .7rem;
+  border: 1px solid #658b72;
+  border-radius: .3rem;
+  background: white;
+  color: #2b3d2f;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  accent-color: #2f9434;
+}
+
+/* PASO 11. La proporción del video se conserva a cualquier ancho. */
+.video {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 0;
+  display: block;
+}
+
+.confirmacion {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.pie {
+  background: #2c4031;
+  color: white;
+  padding: 2rem 0;
+}
+
+.pie a {
+  color: white;
+}
+
+.redes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+}
+
+.redes a {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+}
+
+.redes img {
+  filter: invert(1);
+}
+
+.saltar {
+  position: absolute;
+  left: -9999px;
+}
+
+.saltar:focus {
+  left: 1rem;
+  top: 1rem;
+  padding: 1rem;
+  background: white;
+  z-index: 20;
+}
+
+/* PASO 12. TABLET: estas reglas se aplican a 900 px o menos. */
+@media (max-width: 900px) {
+  .barra {
+    gap: .4rem;
+  }
+
+  .tarjetas {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  h1 {
+    font-size: 2.2rem;
+  }
+}
+
+/* PASO 13. CELULAR: cambiamos columnas por una sola columna. */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.9rem;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+
+  .dos-columnas,
+  .tarjetas,
+  .galeria {
+    grid-template-columns: 1fr;
+  }
+
+  .dos-columnas {
+    gap: 1.5rem;
+  }
+
+  .hero,
+  .seccion {
+    padding-top: 2.2rem;
+    padding-bottom: 2.2rem;
+  }
+
+  .barra nav {
+    width: 100%;
+  }
+
+  .menu {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0;
+  }
+
+  .menu a,
+  summary {
+    padding: .45rem .55rem;
+    font-size: .95rem;
+  }
+
+  /* Conserva el desplegable vertical bajo Resolver y dentro de la pantalla. */
+  .submenu {
+    left: auto;
+    right: 0;
+    width: 205px;
+    max-width: 85vw;
+    max-height: 55vh;
+    overflow-y: auto;
+  }
+
+  section[id],
+  main[id] {
+    scroll-margin-top: 190px;
+  }
+
+  .enlace {
+    margin-left: 0;
+  }
+
+  .formulario,
+  .orientador,
+  .resultados {
+    padding: 1rem;
+  }
+}
+
+/* Detalles cálidos: fondo de papel, acento terracota y bordes suaves. */
+.postal {
+  background: #ffffff;
+  padding: .8rem;
+  border: 1px solid #cedfb7;
+  border-radius: 2rem 1rem 2.8rem 1rem;
+  box-shadow: 8px 10px 0 #d5ebb9;
+}
+
+.postal figcaption {
+  padding: .6rem .5rem .2rem;
+  font-family: Georgia, serif;
+  font-style: italic;
+}
+
+.hero h1 {
+  font-family: Georgia, serif;
+  font-weight: normal;
+  font-size: clamp(2.2rem, 4.6vw, 3.8rem);
+  letter-spacing: -.035em;
+}
+
+h2 {
+  font-family: Georgia, serif;
+  font-weight: normal;
+}
+
+.tarjeta:nth-child(2) {
+  background: #f0ffdc;
+  border-radius: 1.5rem .6rem 1.5rem .6rem;
+}
+
+blockquote {
+  font-family: Georgia, serif;
+  font-style: italic;
+  max-width: 780px;
+}
+
+textarea {
+  resize: vertical;
+}
+
+@media (max-width: 600px) {
+  .barra {
+    padding: .6rem 0;
+  }
+
+  .marca {
+    font-size: 1.2rem;
+  }
+
+  .marca img {
+    width: 30px;
+  }
+}

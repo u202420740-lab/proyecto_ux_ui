@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <!-- profe ... si lee esto ... considerenos -->
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Inicio | AtmosHero</title>
+
+  <!-- :I -->
+
+  <link rel="stylesheet" href="css/estilos.css">
+
+  <link rel="icon" type="image/svg+xml" href="iconos/logo.svg">
+
+  <link rel="stylesheet" href="css/accesibilidad.css">
+  <script src="js/menu.js" defer></script>
+  <script src="js/grafico-emisiones.js" defer></script>
+</head>
+
+
+
+<body>
+
+  <a class="saltar" href="#contenido">Saltar al contenido</a>
+
+  <header class="cabecera">
+
+    <div class="contenedor barra">
+
+      <a class="marca" href="#inicio"><img src="iconos/logo.svg" alt="" width="150" height="150">AtmosHero</a>
+
+      <button id="boton-menu" class="hamburguesa" type="button" aria-controls="navegacion" aria-expanded="false" aria-label="Abrir menú" hidden>
+        <span aria-hidden="true">☰</span> <span id="texto-menu">Menú</span>
+      </button>
+      <nav id="navegacion" class="navegacion" aria-label="Navegación principal">
+
+        <ul class="menu">
+
+          <li><a href="#inicio">Inicio</a></li>
+
+          <li><a href="#nosotros">Quiénes somos</a></li>
+
+          <li>
+
+            <details id="resolver" class="desplegable">
+
+              <summary>Explorar</summary>
+
+              <ul class="submenu">
+
+                <li><a href="#servicios">Servicios</a></li>
+
+                <li><a href="#orientador">Acciones ambientales</a></li>
+
+                <li><a href="#contacto">Contáctanos</a></li>
+
+              </ul>
+
+            </details>
+
+          </li>
+
+          <li><a href="recursos.html">Video y guía</a></li>
+
+        </ul>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+  <main id="contenido">
+
+    <section tabindex="-1" id="inicio" class="hero contenedor dos-columnas" aria-labelledby="titulo">
+
+      <div>
+
+        <p class="etiqueta">ODS 13 · Acción por el clima</p>
+
+        <h1 id="titulo">Mide tu impacto.<br>Actúa por nuestro clima.</h1>
+
+        <p>Pequeñas decisiones pueden contribuir a un futuro más sostenible. En AtmosHero compartimos información,
+          iniciativas y actividades para que las personas participen en el cuidado del planeta.</p>
+
+        <a class="boton" href="#orientador">Descubrir acciones</a>
+
+        <a class="enlace" href="recursos.html">Conocer la iniciativa</a>
+
+        <p class="nota">Información y propuestas para promover la acción climática desde la comunidad.</p>
+
+      </div>
+
+      <figure class="postal"><img class="foto" src="imagenes/nosotros.jpg"
+          alt="Actividad comunitaria relacionada con el cuidado del medio ambiente" width="1000" height="667">
+
+        <figcaption>El cambio comienza con acciones que podemos compartir.</figcaption>
+
+      </figure>
+
+    </section>
+
+    <section tabindex="-1" id="nosotros" class="seccion fondo">
+
+      <div class="contenedor dos-columnas">
+
+        <img class="foto" src="imagenes/grupo3.jpg" alt="Equipo que promueve iniciativas de sostenibilidad ambiental"
+          width="1000" height="667" loading="lazy">
+
+        <div>
+
+          <p class="etiqueta">Quiénes somos</p>
+
+          <h2>Una comunidad comprometida con el clima.</h2>
+
+          <p>Somos un equipo estudiantil comprometido con la sostenibilidad ambiental y la mitigación del cambio
+            climático. Tomando como referencia herramientas digitales de acción climática, buscamos inspirar a las
+            personas a reconocer su impacto y adoptar hábitos más sostenibles.</p>
+
+          <h3>Nuestra misión</h3>
+
+          <p>Facilitar información y recursos accesibles que ayuden a las personas a comprender su huella ambiental y a
+            tomar decisiones cotidianas favorables para el planeta.</p>
+
+          <h3>Nuestra visión</h3>
+
+          <p>Impulsar una comunidad activa y responsable, en la que las iniciativas individuales y colectivas
+            contribuyan a un futuro más sostenible.</p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <section tabindex="-1" id="servicios" class="seccion contenedor">
+
+      <p class="etiqueta">Un recorrido sencillo</p>
+
+      <h2>Del conocimiento a la acción.</h2>
+
+      <div class="tarjetas">
+
+        <article class="tarjeta"><span class="numero">01 / Explora</span>
+
+          <h3>Información ambiental</h3>
+
+          <p>Consulta recursos para comprender el cambio climático y sus efectos en la vida diaria.</p><a
+            href="recursos.html">Ver recursos</a>
+
+        </article>
+
+        <article class="tarjeta"><span class="numero">02 / Participa</span>
+
+          <h3>Encuentros comunitarios</h3>
+
+          <p>Conoce ideas para organizar jornadas de limpieza, campañas de reciclaje y actividades de educación
+            ambiental.</p><a href="#proyectos">Ver proyectos</a>
+
+        </article>
+
+        <article class="tarjeta"><span class="numero">03 / Actúa</span>
+
+          <h3>Metas sostenibles</h3>
+
+          <p>Propón cambios alcanzables para ahorrar energía, reducir residuos y cuidar los espacios comunes.</p><a
+            href="#contacto">Comparte una idea</a>
+
+        </article>
+
+      </div>
+
+    </section>
+
+    <section tabindex="-1" id="orientador" class="seccion fondo">
+
+      <div class="contenedor">
+
+        <p class="etiqueta">ODS 13 · Ideas para el día a día</p>
+
+        <h2>¿Por dónde quieres empezar?</h2>
+
+        <p>Elige un tema para conocer acciones cotidianas que pueden contribuir al cuidado del medio ambiente.</p>
+
+        <!---->
+
+        <fieldset class="orientador">
+
+          <legend>Área de interés</legend>
+
+          <input type="radio" name="objeto" id="mochila" checked><label for="mochila">Ahorro de energía</label>
+
+          <input type="radio" name="objeto" id="libreta"><label for="libreta">Residuos y reciclaje</label>
+
+          <input type="radio" name="objeto" id="abrigo"><label for="abrigo">Transporte sostenible</label>
+
+          <div class="resultados">
+
+            <div class="respuesta mochila">
+
+              <p class="etiqueta">Acción 01</p>
+
+              <h3>Usa la energía de forma responsable</h3>
+
+              <p>Apaga las luces que no necesitas, aprovecha la iluminación natural y revisa qué aparatos pueden
+                desconectarse cuando no se utilizan.</p>
+
+            </div>
+
+            <div class="respuesta libreta">
+
+              <p class="etiqueta">Acción 02</p>
+
+              <h3>Reduce y separa tus residuos</h3>
+
+              <p>Reutiliza materiales, evita productos desechables cuando sea posible y averigua qué opciones de
+                reciclaje existen en tu comunidad.</p>
+
+            </div>
+
+            <div class="respuesta abrigo">
+
+              <p class="etiqueta">Acción 03</p>
+
+              <h3>Considera otras formas de desplazarte</h3>
+
+              <p>Cuando sea viable y seguro, camina, usa bicicleta o transporte público, o comparte viajes para reducir
+                los desplazamientos individuales.</p>
+
+            </div>
+
+            <a class="boton" href="#contacto">Quiero compartir una propuesta</a>
+
+          </div>
+
+        </fieldset>
+
+        <p class="nota">Estas ideas son orientativas. Puedes compartir tus propias propuestas mediante el formulario de
+          contacto.</p>
+
+      </div>
+
+    </section>
+
+    <!-- Sección nueva: el proyecto original no contiene mediciones reales. -->
+    <section id="emisiones" class="seccion contenedor" aria-labelledby="titulo-emisiones">
+      <p class="etiqueta">ODS 13 · Lectura accesible</p>
+      <h2 id="titulo-emisiones">Emisiones por categoría</h2>
+      <p id="nota-emisiones" class="nota"><strong>Datos de demostración.</strong> Estos porcentajes ilustran la interacción; no son un historial real ni una estimación de tu huella.</p>
+      <div id="contenedor-grafico-emisiones">
+        <button id="btn-modo-inclusivo" class="boton" type="button" aria-pressed="false" aria-controls="grafico-emisiones leyenda-emisiones" hidden>
+          <span class="texto-btn">Modo Inclusivo (patrones)</span>
+          <span id="estado-modo" aria-hidden="true">: desactivado</span>
+        </button>
+        <p id="estado-emisiones" role="status">Colores, iconos y porcentajes. Los patrones están desactivados.</p>
+        <figure aria-labelledby="titulo-emisiones" aria-describedby="nota-emisiones">
+          <!-- El gráfico es decorativo para lectores de pantalla: la lista contiene los mismos datos. -->
+          <div id="grafico-emisiones" aria-hidden="true"></div>
+          <figcaption>Distribución porcentual de ejemplo. Cada barra se mide de 0 a 100 %.</figcaption>
+        </figure>
+        <h3>Leyenda y datos</h3>
+        <ul id="leyenda-emisiones" class="leyenda-emisiones"></ul>
+        <noscript>Activa JavaScript para ver la demostración interactiva y sus datos.</noscript>
+      </div>
+    </section>
+
+    <section id="proyectos" class="seccion contenedor">
+
+      <p class="etiqueta">Acción local</p>
+
+      <h2>Proyectos para cuidar nuestro entorno.</h2>
+
+      <div class="tarjetas">
+
+        <article class="tarjeta">
+
+          <h3>Lima</h3>
+
+          <p>Charlas sobre hábitos sostenibles, jornadas de limpieza de parques y campañas de reciclaje y
+            concientización ambiental.</p>
+
+        </article>
+
+        <article class="tarjeta">
+
+          <h3>Arequipa y Trujillo</h3>
+
+          <p>Actividades comunitarias para recuperar espacios públicos, cuidar áreas verdes y promover una gestión
+            responsable de los residuos.</p>
+
+        </article>
+
+        <article class="tarjeta">
+
+          <h3>Cusco</h3>
+
+          <p>Talleres de educación ambiental para compartir conocimientos y fomentar la participación de la comunidad.
+          </p>
+
+        </article>
+
+      </div>
+
+    </section>
+
+    <section id="galeria" class="seccion fondo">
+
+      <div class="contenedor">
+
+        <h2>Pequeñas acciones, grandes cambios.</h2>
+
+        <div class="galeria">
+
+          <figure><img src="imagenes/grupo1.jfif" alt="Personas participando en una actividad ambiental" width="1000"
+              height="667" loading="lazy">
+
+            <figcaption>Participar para cuidar nuestro entorno</figcaption>
+
+          </figure>
+
+          <figure><img src="imagenes/grupo2.jpeg" alt="Presentación de una iniciativa de sostenibilidad ambiental"
+              width="1000" height="667" loading="lazy">
+
+            <figcaption>Compartir ideas para un futuro sostenible</figcaption>
+
+          </figure>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <section id="testimonios" class="seccion contenedor">
+
+      <blockquote>“Comprender cómo nuestras decisiones cotidianas afectan al entorno nos anima a adoptar hábitos más
+        responsables y a colaborar con otras personas”.</blockquote>
+
+      <p>La participación comunitaria puede ayudar a difundir información y promover acciones positivas para el clima.
+      </p>
+
+    </section>
+
+    <section tabindex="-1" id="contacto" class="seccion fondo">
+
+      <div class="contenedor dos-columnas">
+
+        <div>
+
+          <p class="etiqueta">Contáctanos</p>
+
+          <h2>Cuéntanos tu idea para cuidar el planeta.</h2>
+
+          <p>Comparte una propuesta, una actividad comunitaria o una consulta relacionada con el cambio climático y la
+            sostenibilidad.</p>
+
+          <p class="nota">Información de contacto</p>
+
+          <p>Correo: contacto@AtmosHero.org</p>
+
+          <p>Teléfono: 999 999 999</p>
+
+          <p>Ubicación: Lima, Perú</p>
+
+        </div>
+
+        <form action="confirmacion.html" method="get" class="formulario">
+
+          <label for="nombre">Nombre</label><input id="nombre" type="text" required maxlength="60"
+            placeholder="Ejemplo: Ana" autocomplete="off">
+
+          <label for="correo">Correo electrónico</label><input id="correo" type="email" required
+            placeholder="ana@example.com" autocomplete="off">
+
+          <label for="actividad">Tema de interés</label><select id="actividad" required>
+
+            <option value="">Selecciona un tema</option>
+
+            <option>Acción por el clima</option>
+
+            <option>Encuentros comunitarios</option>
+
+            <option>Educación ambiental</option>
+
+            <option>Propuesta de colaboración</option>
+
+          </select>
+
+          <label for="detalle">Tu mensaje</label><textarea id="detalle" required minlength="8" maxlength="240" rows="3"
+            placeholder="Escribe tu propuesta o consulta"></textarea>
+
+          <div><input id="acepto" type="checkbox" required> <label for="acepto">He revisado la información de
+              contacto.</label>
+
+          </div>
+
+          <button type="submit" class="boton">Continuar</button>
+
+        </form>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer class="pie">
+
+    <div class="contenedor">
+
+      <p><strong>AtmosHero</strong> · Mide tu impacto, protege la atmósfera y actúa por nuestro clima.</p>
+
+      <p>Contacto: contacto@AtmosHero.org</p>
+
+      <nav class="redes" aria-label="Redes sociales">
+
+        <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><img src="iconos/facebook.svg"
+            alt="" width="24" height="24">Facebook</a>
+
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><img src="iconos/instagram.svg"
+            alt="" width="24" height="24">Instagram</a>
+
+        <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer"><img src="iconos/youtube.svg"
+            alt="" width="24" height="24">YouTube</a>
+
+      </nav>
+
+      <p>© 2026 AtmosHero · ODS 13: Acción por el clima · <a href="FUENTES.txt">Créditos de recursos</a></p>
+
+    </div>
+
+  </footer>
+
+</body>
+
+
+
+</html>

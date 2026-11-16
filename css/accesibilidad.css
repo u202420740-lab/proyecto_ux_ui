@@ -1,0 +1,30 @@
+/* Archivo adicional: conserva los estilos y colores de AtmosHero. */
+[hidden] { display: none !important; }
+.hamburguesa { display: none; min-height: 44px; padding: .6rem; font: inherit; background: #174d32; color: white; border: 1px solid; border-radius: .45rem; cursor: pointer; }
+#btn-modo-inclusivo { background: #174d32; min-height: 44px; }
+#btn-modo-inclusivo:hover { background: #26352d; }
+#contenedor-grafico-emisiones { padding: 1.25rem; background: white; border: 1px solid #658b72; border-radius: .7rem; }
+.fila-emision { margin-block: 1rem; }
+.fila-emision > span { display: block; font-weight: bold; margin-bottom: .3rem; }
+.pista-emision { height: 2rem; background: #f0f3ee; border: 1px solid #26352d; }
+.barra-emision { height: 100%; border-right: 1px solid #26352d; }
+.leyenda-emisiones { padding: 0; list-style: none; }
+.leyenda-emisiones li { display: flex; align-items: center; gap: .65rem; margin-block: .8rem; }
+.muestra-emision { display: inline-block; width: 2.5rem; height: 1.8rem; border: 1px solid #26352d; flex-shrink: 0; }
+/* Las mismas clases aplican color y patrón a las barras y las muestras. */
+.transporte { background-color: #a8d8ea; }
+.energia { background-color: #f6d88a; }
+.alimentacion { background-color: #c6b5e8; }
+.residuos { background-color: #a7d9be; }
+.modo-inclusivo-activo .transporte { background-image: repeating-linear-gradient(45deg, transparent 0 6px, #26352d 6px 8px); }
+.modo-inclusivo-activo .energia { background-image: radial-gradient(circle, #26352d 2px, transparent 2.5px); background-size: 10px 10px; }
+.modo-inclusivo-activo .alimentacion { background-image: repeating-linear-gradient(0deg, transparent 0 6px, #26352d 6px 8px); }
+.modo-inclusivo-activo .residuos { background-image: linear-gradient(#26352d 1px, transparent 1px), linear-gradient(90deg, #26352d 1px, transparent 1px); background-size: 10px 10px; }
+@media (max-width: 600px) {
+  .hamburguesa { display: inline-flex; align-items: center; gap: .5rem; }
+  .navegacion .menu { flex-direction: column; align-items: stretch; }
+  .navegacion .submenu { position: static; width: 100%; max-width: 100%; max-height: none; box-shadow: none; }
+  .cabecera { max-height: 90vh; overflow-y: auto; }
+}
+/* El acceso al contenido debe aparecer por encima del encabezado sticky. */
+.saltar:focus { z-index: 101; }
